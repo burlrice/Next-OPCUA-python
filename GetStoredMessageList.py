@@ -1,12 +1,8 @@
 import sys
 
 from opcua import Client
+from constants import Diagraph
 
-class Diagraph:
-    class OPCUA:
-        ObjectId = "i=85"
-        Namespace = "ns=2"
-        
 client = Client("opc.tcp://{}:16664".format(sys.argv[1]))
 client.connect()
 
