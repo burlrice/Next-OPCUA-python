@@ -1,5 +1,6 @@
 class Diagraph:
     class OPCUA:
+        Port = 16664
         ObjectId = "i=85"
         Namespace = "ns=2"
 

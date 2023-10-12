@@ -3,7 +3,7 @@ import sys
 from opcua import Client
 from constants import Diagraph
 
-client = Client("opc.tcp://{}:16664".format(sys.argv[1]))
+client = Client("opc.tcp://{}:{}".format(sys.argv[1], Diagraph.OPCUA.Port))
 client.connect()
 
 method = client.get_node("{};s={}".format(Diagraph.OPCUA.Namespace, "GetStoredMessageList"))
