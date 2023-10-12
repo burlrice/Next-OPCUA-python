@@ -3,4 +3,7 @@ class Diagraph:
         Port = 16664
         ObjectId = "i=85"
         Namespace = "ns=2"
+        
+        class Methods:
+            GetStoredMessageList = "GetStoredMessageList"
 
