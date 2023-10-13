@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f26a9ba-2527-42ff-9bad-5f9cc6402e59</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RecallMessage.py</StartupFile>
+    <StartupFile>DataSet.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="constants.py" />
+    <Compile Include="DataSet.py" />
     <Compile Include="GetStoredMessageList.py" />
     <Compile Include="ij4k.py" />
     <Compile Include="RecallMessage.py" />
