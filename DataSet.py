@@ -6,9 +6,8 @@ from opcua import ua
 from constants import Diagraph
 from ij4k import ij4k
 
-ipaddr =sys.argv[1]
+ipaddr = sys.argv[1]
 messageName = sys.argv[2];
-
 printer = ij4k(ipaddr)
 result = printer.callMethod(Diagraph.OPCUA.Methods.RecallMessage, messageName)
 error = result[0]

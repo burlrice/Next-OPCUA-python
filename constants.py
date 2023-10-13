@@ -8,4 +8,5 @@ class Diagraph:
             GetStoredMessageList    = "GetStoredMessageList"
             RecallMessage           = "RecallMessage"
             PrintPrd                = "PrintPrd"
+            GetStatusInformation    = "GetStatusInformation"
 
