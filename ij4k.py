@@ -16,5 +16,5 @@ class ij4k:
         if (len(args) == 0):
             return node.call_method(method)
         else:
-            return node.call_method(method, args)
-    
+            return node.call_method(method, *args)
+        

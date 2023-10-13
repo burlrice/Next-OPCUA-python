@@ -1,6 +1,8 @@
 import sys;
-from lxml import etree
 
+from datetime import datetime
+from lxml import etree
+from opcua import ua
 from constants import Diagraph
 from ij4k import ij4k
 
@@ -14,6 +16,13 @@ if len(error) == 0:
 
     for i in document.xpath('//ProductObject//Variables//DataSet//ColumnValues//Column'):
         if 'Value' in i.attrib:
-            print("{}: {}".format(i.attrib['Name'], i.attrib['Value']))
+            i.attrib['Value'] = "TODO {}".format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         else:
-            print(i.attrib['Name'])
+            pass
+        
+    prd = etree.tostring(document, pretty_print=True, xml_declaration=True).decode()
+
+    error = printer.callMethod(Diagraph.OPCUA.Methods.PrintPrd, ua.Variant(prd, ua.VariantType.String), ua.Variant(1, ua.VariantType.Int32))
+
+    if len(error) > 0:
+        print("{} failed with {}".format(Diagraph.OPCUA.Methods.PrintPrd), error)

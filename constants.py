@@ -7,4 +7,5 @@ class Diagraph:
         class Methods:
             GetStoredMessageList    = "GetStoredMessageList"
             RecallMessage           = "RecallMessage"
+            PrintPrd                = "PrintPrd"
 
