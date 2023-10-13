@@ -1,4 +1,4 @@
-import sys;
+import sys
 
 from opcua import ua
 from constants import Diagraph

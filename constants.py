@@ -5,8 +5,9 @@ class Diagraph:
         Namespace = "ns=2"
         
         class Methods:
-            GetStoredMessageList    = "GetStoredMessageList"
-            RecallMessage           = "RecallMessage"
-            PrintPrd                = "PrintPrd"
-            GetStatusInformation    = "GetStatusInformation"
+            GetStoredMessageList            = "GetStoredMessageList"
+            RecallMessage                   = "RecallMessage"
+            PrintPrd                        = "PrintPrd"
+            GetStatusInformation            = "GetStatusInformation"
+            PrintPreviewCurrentCompressed   = "PrintPreviewCurrentCompressed"
 
