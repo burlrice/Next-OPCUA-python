@@ -6,9 +6,11 @@ from opcua import ua
 from constants import Diagraph
 from ij4k import ij4k
 
-printer = ij4k(sys.argv[1])
+ipaddr =sys.argv[1]
+messageName = sys.argv[2];
 
-result = printer.callMethod(Diagraph.OPCUA.Methods.RecallMessage, "Database.next")
+printer = ij4k(ipaddr)
+result = printer.callMethod(Diagraph.OPCUA.Methods.RecallMessage, messageName)
 error = result[0]
 
 if len(error) == 0:
@@ -21,7 +23,6 @@ if len(error) == 0:
             pass
         
     prd = etree.tostring(document, pretty_print=True, xml_declaration=True).decode()
-
     error = printer.callMethod(Diagraph.OPCUA.Methods.PrintPrd, ua.Variant(prd, ua.VariantType.String), ua.Variant(1, ua.VariantType.Int32))
 
     if len(error) > 0:
