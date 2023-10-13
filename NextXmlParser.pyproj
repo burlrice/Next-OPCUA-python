@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f26a9ba-2527-42ff-9bad-5f9cc6402e59</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GetStoredMessageList.py</StartupFile>
+    <StartupFile>RecallMessage.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +27,8 @@
   <ItemGroup>
     <Compile Include="constants.py" />
     <Compile Include="GetStoredMessageList.py" />
+    <Compile Include="ij4k.py" />
+    <Compile Include="RecallMessage.py" />
     <Compile Include="VarFieldObject.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

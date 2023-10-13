@@ -5,5 +5,6 @@ class Diagraph:
         Namespace = "ns=2"
         
         class Methods:
-            GetStoredMessageList = "GetStoredMessageList"
+            GetStoredMessageList    = "GetStoredMessageList"
+            RecallMessage           = "RecallMessage"
 

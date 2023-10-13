@@ -1,14 +1,11 @@
 import sys
 
-from opcua import Client
 from constants import Diagraph
+from ij4k import ij4k
 
-client = Client("opc.tcp://{}:{}".format(sys.argv[1], Diagraph.OPCUA.Port))
-client.connect()
+printer = ij4k(sys.argv[1])
 
-method = client.get_node("{};s={}".format(Diagraph.OPCUA.Namespace, Diagraph.OPCUA.Methods.GetStoredMessageList))
-node = client.get_node(Diagraph.OPCUA.ObjectId)
-result = node.call_method(method)
+result = printer.callMethod(Diagraph.OPCUA.Methods.GetStoredMessageList)
 error = result[0]
 
 if len(error) == 0:
@@ -16,6 +13,3 @@ if len(error) == 0:
         print(i)
 else:
     print(error)
-
-client.disconnect()
-
