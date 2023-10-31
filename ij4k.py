@@ -3,7 +3,7 @@ from constants import Diagraph
 
 class ij4k:
     def __init__ (self, ipaddr):
-        self.client = Client("opc.tcp://{}:{}".format(ipaddr, Diagraph.OPCUA.Port))
+        self.client = Client("opc.tcp://{}:{}".format(ipaddr, Diagraph.OPCUA.Port), timeout=20)
         self.client.connect()
         
     def __del(self):

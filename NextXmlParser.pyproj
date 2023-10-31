@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f26a9ba-2527-42ff-9bad-5f9cc6402e59</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PrintPreviewCurrentCompressed.py</StartupFile>
+    <StartupFile>GetPrintBufferAnalysisImage.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,7 +12,7 @@
     <Name>NextXmlParser</Name>
     <RootNamespace>NextXmlParser</RootNamespace>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>192.168.1.98 c:\foxjet\debug\preview.bmp</CommandLineArguments>
+    <CommandLineArguments>192.168.1.98 "Date and time 1 200dpi'.next"</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
     <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
@@ -27,6 +27,7 @@
   <ItemGroup>
     <Compile Include="constants.py" />
     <Compile Include="DataSet.py" />
+    <Compile Include="GetPrintBufferAnalysisImage.py" />
     <Compile Include="GetStatusInformation.py" />
     <Compile Include="GetStoredMessageList.py" />
     <Compile Include="ij4k.py" />
